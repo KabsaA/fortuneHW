@@ -1,8 +1,28 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    """Renders the home page with links to Fortune and Weather."""
-    return render_template('index.html')
+<form action="/fortune_results" method="get">
+    <p>
+        What is your name?
+        <input type="text" name="name"/>
+    </p>
+    <p> What month were you born?<br>
+      <input type="radio" name="fortune" value="male"> January - April<br>
+      <input type="radio" name="fortune" value="female"> May - August<br>
+      <input type="radio" name="fortune" value="other"> September - December
+    </p>
+    <p>
+    </p>
+    <p> What day of the month?
+        <input type="checkbox" name="days"/>
+        1-15
+        <input type="checkbox" name="days"/>
+        16-31
+    </p>
+    <p>
+        What's your fav beverage?
+        <select name="tell_fortune">
+            <option value="1">Coffee</option>
+            <option value="2">Water</option>
+            <option value="3">Tea</option>
+        </select>
+    </p>
+    <button type="submit">Get fortune!</button>
+</form>
