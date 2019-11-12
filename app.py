@@ -8,12 +8,11 @@ def index():
 
 @app.route('/fortune')
 def fortune_form():
-    """Renders the fortune form page."""
+    """Renders the fortune page."""
     return render_template('fortune.html')
 
 @app.route('/fortune_result')
 def fortune_result():
-    # users_bday = request.args.get('month')
     users_name = request.args.get('name')
     users_month = request.args.get('month')
     drink = request.args.get('tell_fortune')
