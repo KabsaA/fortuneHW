@@ -1,12 +1,20 @@
-<form action="/fortune_results" method="get">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Fortune Teller
+        </title>
+        <link rel="stylesheet" type="text/css" href="../fortunes.css">
+    </head>
+<form action="fortune_result" method="GET">
     <p>
         What is your name?
         <input type="text" name="name"/>
     </p>
     <p> What month were you born?<br>
-      <input type="radio" name="fortune" value="male"> January - April<br>
-      <input type="radio" name="fortune" value="female"> May - August<br>
-      <input type="radio" name="fortune" value="other"> September - December
+      <input type="radio" name="month" value="first"> January - April<br>
+      <input type="radio" name="month" value="second"> May - August<br>
+      <input type="radio" name="month" value="third"> September - December
     </p>
     <p>
     </p>
